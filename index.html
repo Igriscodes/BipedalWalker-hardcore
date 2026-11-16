@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BipedalWalker Hardcore</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="canvas-container">
+    <canvas id="gameCanvas"></canvas>
+  </div>
+
+  <div class="ui-overlay">
+    <div class="top-bar">
+      <div class="title-box">
+        <h1>BipedalWalker Hardcore</h1>
+      </div>
+
+      <div class="hud-panel">
+        <div class="hud-card">
+          <span class="hud-label">Distance</span>
+          <span id="hudDist" class="hud-value highlight">0.0 m</span>
+        </div>
+        <div class="hud-card">
+          <span class="hud-label">Record</span>
+          <span id="hudRecord" class="hud-value record">0.0 m</span>
+        </div>
+        <div class="hud-card">
+          <span class="hud-label">Speed</span>
+          <span id="hudSpeed" class="hud-value">0.0 m/s</span>
+        </div>
+        <div class="hud-card">
+          <span class="hud-label">Score</span>
+          <span id="hudScore" class="hud-value">0.0</span>
+        </div>
+        <div class="hud-card">
+          <span class="hud-label">Steps</span>
+          <span id="hudSteps" class="hud-value">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="controls-bar">
+      <div class="button-group">
+        <button id="btnPlayPause" class="primary">⏸ Pause</button>
+        <button id="btnReset">🔄 Reset</button>
+        <button id="btnSpeed1x" class="active">1x</button>
+        <button id="btnSpeed2x">2x</button>
+        <button id="btnSpeed5x">5x</button>
+        <button id="btnFullscreen">⛶ Fullscreen</button>
+      </div>
+
+      <div class="toggle-group">
+        <label class="toggle-item">
+          <input type="checkbox" id="chkHardcore" checked>
+          <span>Hardcore</span>
+        </label>
+        <label class="toggle-item">
+          <input type="checkbox" id="chkLidar" checked>
+          <span>LIDAR</span>
+        </label>
+        <label class="toggle-item">
+          <input type="checkbox" id="chkAutoRestart" checked>
+          <span>Auto Restart</span>
+        </label>
+        <div class="status-pill">
+          <div id="statusDot" class="status-dot"></div>
+          <span id="statusText">Walking</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="planck.min.js"></script>
+  <script src="weights.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
